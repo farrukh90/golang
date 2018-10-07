@@ -1,7 +1,5 @@
 package main // this means executable file
 
-import "fmt"
-
 /*func main() {
 	var card string = "Ace of Spades" // Creates a variable
 	fmt.Println(card)
@@ -24,20 +22,13 @@ func newCard() string { // This basically tells that we are trying to return a
 	return "Five of Diamonds"
 }
 
-func newCard2() int {
-	return 2
+func newCard2() string {
+	return "Five of shit"
 }
-func newCard3() bool {
-	return true
-}
-func newCard4() int {
-	return 5
-}
+
 func main() {
-	cards := []string{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
+	cards := deck{newCard2(), newCard()}
+	cards = append(cards, newCard2())
 	//fmt.Println(cards)
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.print()
 }
